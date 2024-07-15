@@ -1,0 +1,241 @@
+Delivered-To: andruha19905@gmail.com
+Received: by 2002:a05:7108:a027:b0:3a2:b978:390f with SMTP id gx39csp1936391gdb;
+        Sun, 14 Jul 2024 21:20:38 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IEHJOd+t+T2ttPNi483VqVvyDCzsVPqQtgmEt46GwGGh2zKF8cwn1F8Qbq5JW/53ePexSbA
+X-Received: by 2002:a05:6512:3b84:b0:52e:9ecd:3465 with SMTP id 2adb3069b0e04-52eb99d4e22mr12493242e87.57.1721017238353;
+        Sun, 14 Jul 2024 21:20:38 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1721017238; cv=none;
+        d=google.com; s=arc-20160816;
+        b=xXLM5uQfsWO9V85vryBOkSDvy9NFCJy//kcRRNenZatXixb46vwHiGcRkaXhaxrca8
+         r7Vi6d9Y02wmWLWCaqcBHTPAuX7BQB6hUp4YDT9sqHVoFOrEzE3TLRd+qHgjpLSU0es/
+         U2FLZ/eNsDmoWumAIt0kajhCBysNjfgKZr2UdtjQxCcXu63ZICHRrtY8UStTOtEGajvI
+         OqkLsvKihtaC9KVqxtitL5yAlrspkJZOpO8jOsRr7Qhg/Dx4pOD/2ZMj8pGu4uvuvhzq
+         j7ZuoAzpwTxVfseCsddv67XBqOEjQKVFOY8FhcJYn2HoRtTzP1wOwBHEWATh/ecra9A5
+         VARw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20160816;
+        h=content-transfer-encoding:mime-version:message-id:from:date:subject
+         :to:dkim-signature;
+        bh=sQD+vhm3SIgtrh6oPA9PJPYDSgTOkjCQ5TV+74CBdkU=;
+        fh=HjiHvc3x+PJE3xuNGB0gEdpJUk8diSRPWisWryBWTL4=;
+        b=QvjUiInfqVWZyZ9yjZ4C2yeF9Vh4h1kC+uJnK6JniZ6emXZP3axB00dPcULZx6MA1n
+         dbTcNXk7wK6HY+7O8booK8NUvLHEGW0HYN7Kw6TbVVBGW/xJ3GOgOtU0RrfaXaUb9diM
+         sZP61otp45Jo4lRw9BsP/BPVmQwc2959AjhJEnOjrfTFKaL2jyysvLXrORIQGIqQQ20b
+         nXZHvxp1SUxsdR9Q22HbUq2NzJ3DzG02X5aUJQk7aHH+mw4dT6XAy0+dV29BOocMtBJb
+         FReU0sPKmvs/KfF6tsY+S8ABAcCcERPnOEt/zFLE1pSYcLwif1xLedl1wW5SS5WO5Br9
+         LTHw==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@amocrm.ru header.s=mx-relay-02 header.b=Xsf6oIqX;
+       spf=pass (google.com: domain of support@amocrm.ru designates 88.212.249.9 as permitted sender) smtp.mailfrom=support@amocrm.ru;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=amocrm.ru
+Return-Path: <support@amocrm.ru>
+Received: from mx-relay-05.amocrm.ru (mx-relay-05.amocrm.ru. [88.212.249.9])
+        by mx.google.com with ESMTPS id 2adb3069b0e04-52ed2571171si1148251e87.468.2024.07.14.21.20.38
+        for <andruha19905@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 14 Jul 2024 21:20:38 -0700 (PDT)
+Received-SPF: pass (google.com: domain of support@amocrm.ru designates 88.212.249.9 as permitted sender) client-ip=88.212.249.9;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@amocrm.ru header.s=mx-relay-02 header.b=Xsf6oIqX;
+       spf=pass (google.com: domain of support@amocrm.ru designates 88.212.249.9 as permitted sender) smtp.mailfrom=support@amocrm.ru;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=amocrm.ru
+Received: from noreply.amocrm.ru (unknown [10.13.50.184])
+	by mx-relay-05.amocrm.ru (Postfix) with ESMTP id DD009C3537E
+	for <andruha19905@gmail.com>; Mon, 15 Jul 2024 04:20:37 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=amocrm.ru;
+	s=mx-relay-02; t=1721017237;
+	bh=sQD+vhm3SIgtrh6oPA9PJPYDSgTOkjCQ5TV+74CBdkU=;
+	h=To:Subject:Date:From;
+	b=Xsf6oIqXgiax+EXNFOXHWP5AADNxw6IdbXb1kXg1lOrJYMcHvgM2T12R3cevaahL1
+	 jyxCj5uy1T2Qt9aSEent6hehrnudDB8Sxmi/WqYsX9JCWe8jgY+LQwOtCtgVlcfRk6
+	 JvRTszMxusEAHem3c9m8/lEMwTfyFy1C4yVGm9NY=
+Received: by noreply.amocrm.ru (Postfix, from userid 33)
+	id DB955200BB; Mon, 15 Jul 2024 04:20:37 +0000 (UTC)
+To: andruha19905@gmail.com
+Subject: =?utf-8?B?YW1vQ1JNOiDQo9GB0L/QtdGI0L3QsNGPINGA0LXQs9C40YHRgtGA0LDRhtC4?=  =?utf-8?B?0Y8=?=
+Date: Mon, 15 Jul 2024 04:20:37 +0000
+From: support@amocrm.ru
+Message-ID: <4Yu4VSjPM6J4ikNAcd67tq9pCeESiSjmy439nXEXQ@core-workers01b.prod.core.amosrv.ru>
+X-Mailer: PHPMailer 6.6.4 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <style>
+
+    /*
+    Внимание, стили прописанные через  <style> не работают в некоторых почтовых клиентах, например в mailru.
+    Чтобы они работали нужно писать все стили прямо в тег!
+    */
+
+    :active, :hover, :focus {
+      outline-style: none;
+      outline-width: 0 !important;
+      outline-color: unset !important;
+    }
+    a:link { -webkit-tap-highlight-color: unset; }
+
+  </style>
+
+</head>
+
+<body bgcolor="#eae9e9">
+<div style="background:#eae9e9;padding-top:20px;padding-bottom:20px;padding-right:20px;padding-left:20px;">
+    <table width="98%" border="0" cellspacing="0" cellpadding="0" style="padding-top:20px;padding-bottom:20px;">
+        <tr>
+            <td align="center">
+                <table cellpadding="0" cellspacing="0" border="0" style="table-layout:fixed;width:100%;max-width:550px;background-color:#FFFFFF;box-shadow:0px 0px 6px #C0C0C0;">
+
+                    <tr>
+    <td align="right" style="padding-top:27px;padding-bottom:18px;padding-right:28px;">
+        <a href="http://www.amocrm.ru/?utm_source=followup&utm_medium=email&utm_campaign=welcome">
+            <img src="https://www.amocrm.ru/static/assets/mail/mail_logo/mail_grey-blue_logo.png" width="180" height="47"  style="border:none;" alt=""/>
+        </a>
+    </td>
+</tr>
+                        <tr>
+                            <td style="padding-left:37px;padding-bottom:23px;padding-right:28px;" align="left">
+                                <span style="font-size:15px;color:#333333;">
+                                Здравствуйте, Andrey.
+                                </span>
+                            </td>
+                        </tr>
+                    <tr style="width:550px;word-wrap:break-word;padding-left:37px;padding-bottom:0;padding-right:28px;">
+                        <td style="padding-left:37px;padding-bottom:16px;padding-right:28px;" align="left">
+              <span style="font-size:15px;color:#333333;">
+                Поздравляем с успешной регистрацией на проекте amoCRM!
+              </span>
+                        </td>
+                    </tr>
+                    <tr style="width:550px;word-wrap:break-word;padding-left:37px;padding-bottom:0;padding-right:28px;">
+                        <td style="padding-left:37px;padding-bottom:25px;padding-right:28px;" align="left">
+              <span style="line-height:19px;font-size:15px;color:#333333;">
+                amoCRM — это простая и понятная программа учета потенциальных клиентов и сделок, которая поможет контролировать и увеличивать Ваши продажи. Для работы с системой не нужно ничего устанавливать и настраивать, все уже готово и доступно через интернет. Осталось только начать пользоваться!
+              </span>
+                        </td>
+                    </tr>
+                    <tr style="width:550px;word-wrap:break-word;padding-left:37px;padding-bottom:0;padding-right:28px;">
+                        <td style="padding-bottom:28px;" align="left">
+                            <table width="100%" border="0" cellspacing="0" cellpadding="0" style="margin-left:37px;">
+                                <tr>
+                                    <td style="background-color:#8dd6f6;" width="11"></td>
+                                    <td style="padding-left:17px;padding-bottom:8px;padding-top:2px;">
+                                        <span style="font-size:15px;color:#333333;">Ваши данные для работы с amoCRM:</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:#8dd6f6;" width="11"></td>
+                                    <td style="padding-left:17px;padding-bottom:5px;">
+                                        <span style="font-size:15px;color:#333333;">Логин: <a style="color:#2e84e3;" href="">andruha19905@gmail.com</a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:#8dd6f6 ;" width="11"></td>
+                                    <td style="padding-left:17px;padding-bottom:5px;">
+                                        <span style="font-size:15px;color:#333333;">Пароль: <a style="color:#2e84e3;" href="">3ajGPw7Z</a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:#8dd6f6;" width="11"></td>
+                                    <td style="padding-left:17px;padding-bottom:8px;">
+                                        <span style="font-size:15px;color:#333333;">Ссылка для входа: <a style="color:#2e84e3;" href="https://andruha19905.amocrm.ru/">https://andruha19905.amocrm.ru/</a></span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td style="background-color:#8dd6f6;" width="11"></td>
+                                    <td style="padding-left:17px;padding-bottom:3px;">
+                                    <span style="padding-bottom:3px;">
+                                      <a style="display:inline-block;font-weight:bold;line-height:31px;height:31px;font-size:15px;color:#FFFFFF;text-decoration:none;padding-left:45px;padding-right:45px;background:url('http://www.amocrm.ru/images/email/bg_btn.png') #009efc;-moz-border-radius:2px;-webkit-border-radius:2px;border-radius:2px;" href="https://andruha19905.amocrm.ru/">Создать новую сделку</a>
+                                    </span>
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="word-wrap:break-word;padding-left:37px;padding-bottom:0;padding-right:28px;" align="left">
+                            <p style="padding-bottom:17px;font-size:15px;color:#333333;border-bottom-width:1px;border-bottom-style:solid;border-bottom-color:#EEEEEE;">С уважением,<br />команда amoCRM</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td style="padding-left:37px;padding-bottom:42px;" align="left">
+
+                            <span style="font-size:15px;color:#333333;line-height:16px;">
+   <table cellspacing="0" style="margin-right: 28px; margin-bottom: 5px">
+       <tr>
+            <td style="margin-bottom: 2px; height: 100%; <!--[if mso | IE]>width:50%;<![endif]--> width: 100%;vertical-align: middle;">
+              <div style="max-width: 320px;float: left;height: 27px;line-height: 0;">
+              <table style="height: 100%;width: 100%;vertical-align: middle;">
+                <tr style="height: 100%;width: 100%;vertical-align: middle;">
+                  <td style="height: 100%;width: 100%;vertical-align: middle;">
+                      E-mail: <a style="color:#333333; margin-right: 0;" href="mailto:support@amocrm.ru">support@amocrm.ru</a> |
+                  </td>
+                </tr>
+              </table>
+            <!--[if mso | IE]>
+            </td>
+            <td style="margin-bottom: 2px; height: 100%;width: 50%;vertical-align: middle;">
+            <![endif]-->
+              </div>
+               <div style="max-width: 320px;float: left;margin-left: 0;height: 27px;">
+                 <table style="height: 100%;width: 100%;vertical-align: middle;">
+                <tr style="height: 100%;width: 100%;vertical-align: middle;">
+                  <td style="height: 100%;width: 100%;vertical-align: middle;white-space: nowrap;">
+                     <a style="text-decoration: none;" href="https://wa.me/79258074803" target="_blank" rel="noopener noreferrer">
+                          <img style="width: 23px; height: 23px; margin: 0 3px 0 0;" src="https://www.amocrm.ru/static/assets/mail/mail_icons/whatsapp.png" alt="whatsapp" width="23" height="23">
+                      </a>
+                      <!--[if mso | IE]>&nbsp;<![endif]-->
+                      <a style="text-decoration: none;" href="https://t.me/amoCRM_Official_bot" target="_blank" rel="noopener noreferrer">
+                          <img style="width: 23px; height: 23px; margin: 0 3px 0 0;" src="https://www.amocrm.ru/static/assets/mail/mail_icons/telegram.png" alt="telegram" width="23" height="23">
+                      </a>
+                      <!--[if mso | IE]>&nbsp;<![endif]-->
+                      <a style="text-decoration: none;" href="https://vk.me/-63068509" target="_blank" rel="noopener noreferrer">
+                          <img style="width: 23px; height: 23px; margin: 0 3px 0 0;" src="https://www.amocrm.ru/static/assets/mail/mail_icons/vk.png" alt="vk" width="23" height="23">
+                      </a>
+                      <!--[if mso | IE]>&nbsp;<![endif]-->
+                      <a style="text-decoration: none;" href="https://www.amocrm.ru/contacts/" target="_blank" rel="noopener noreferrer">
+                          <img style="width: 23px; height: 23px; margin: 0 3px 0 0;" src="https://www.amocrm.ru/static/assets/mail/mail_icons/viber.png" alt="viber" width="23" height="23">
+                      </a>
+                      <!--[if mso | IE]>&nbsp;<![endif]-->
+                      <a style="text-decoration: none;" href="https://www.amocrm.ru/contacts/" target="_blank" rel="noopener noreferrer">
+                          <img style="width: 23px; height: 23px; margin: 0 3px 0 0;" src="https://www.amocrm.ru/static/assets/mail/mail_icons/livechat.png" alt="livechat" width="23" height="23">
+                     </a>
+                    </td>
+                  </tr>
+                </table>
+               </div>
+            </td>
+       </tr>
+    </table>
+    <table cellspacing="0" style="margin-right: 28px; margin-bottom: 5px">
+       <tr>
+            <td style="margin-bottom: 2px; height: 100%;width: 100%;vertical-align: middle;">
+                <div style="width: 100%;padding-left: 1px;margin-left: 1px;">
+                Больше информации о нас в
+                <a style="color: #1155CC;" href="https://vk.com/amocrm_ru" target="_blank" rel="noopener noreferrer">ВКонтакте</a>
+          </div>
+         </td>
+       </tr>
+    </table>
+</span>
+
+                        </td>
+                    </tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+</div>
+</body>
+
+<style type="text/css">
+    body{
+        font-family: \'Helvetica Neue\', Helvetica, Arial, Verdana, sans-serif;
+    }
+</style>
+</html>
+
